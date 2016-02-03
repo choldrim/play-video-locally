@@ -1,0 +1,9 @@
+{
+    "name": "org.deepin.dmovie",
+    "description": "play video with local app",
+    "path": "$HOME/.cache/play-video-locally/start",
+    "type": "stdio",
+    "allowed_origins": [
+        "chrome-extension://geddpfooejohhebhamibjkgkcahnkbnd/"
+    ]
+}

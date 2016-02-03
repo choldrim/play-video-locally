@@ -1,0 +1,40 @@
+#!/usr/bin/python3
+
+import os
+import sys
+import struct
+import json
+
+# redirect all output to a file
+fp = open("/tmp/_play_video_locally.log", "a")
+sys.stdout = fp
+sys.stderr = fp
+
+print("==============")
+
+# get length of msg
+length_bytes = sys.stdin.buffer.read(4)
+if len(length_bytes) == 0:
+    print("Err: fail to get msg length")
+    print(length_bytes)
+    fp.close()
+    quit(0)
+
+# get msg
+length = struct.unpack("i", length_bytes)[0]
+text_json = sys.stdin.buffer.read(length).decode("utf-8")
+print(text_json)
+url = json.loads(text_json).get("text")
+
+# run in dmovie
+run_cmd = "you-get -p deepin-movie --debug %s" % url
+print("run: ", run_cmd)
+sys.stdout.flush()
+sys.stderr.flush()
+
+os.system(run_cmd)
+
+print("==============")
+print()
+
+fp.close()

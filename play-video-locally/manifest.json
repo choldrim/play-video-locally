@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "臣妾做不到...",
+    "version": "2.0.0",
+    "description": "capture movie from website",
+    "permissions": [
+        "nativeMessaging",
+        "tabs"
+    ],
+
+    "icons":{
+        "48": "images/deepin-movie_48.png"
+    },
+
+    "browser_action":{
+        "default_icon":"images/deepin-movie_48.png",
+        "default_popup":"pages/popup.html"
+    }
+}

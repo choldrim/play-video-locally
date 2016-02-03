@@ -1,0 +1,10 @@
+{
+    "name": "org.deepin.dmovie",
+    "description": "play video with local app",
+    "path": "/home/choldrim/.cache/play-video-locally/start",
+    "type": "stdio",
+    "allowed_origins": [
+        "chrome-extension://geddpfooejohhebhamibjkgkcahnkbnd/"
+    ]
+}
+
