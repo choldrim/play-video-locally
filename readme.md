@@ -40,5 +40,8 @@ make build  # run this, if you are not first time to buid crx file
 make install
 ```
 
+### Also see
+[more-detailed-in-my-blog](http://www.choldrim.com/2016/03/06/chrome-extension-launch-local-app/) ;)
+
 ### License
 This project is a chrome extension luanching local app demo, you can do anything under it, just enjoy it ;)
