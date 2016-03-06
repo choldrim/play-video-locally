@@ -1,21 +1,26 @@
+# play-video-locally
+A chrome extension luanch local app **demo**, at the same time, this demo can play online video with local player.  
+The online video include youku, tudou, youtube, etc.  
+power by [you-get](https://github.com/soimort/you-get) :)
+
 ## Installation
+
+- install chrome extension
+
 ```shell
 # install you-get 
 sudo pip3 install you-get
 
-cd play-video-locally
+cd play-video-locally  # project root dir
 
-make build
+make first  # run this, if you are first time to build crx file, and you will get a pem file, after running this
+make build  # run this, if you are not first time to buid crx file
 
 # => install crx in chrome
-
-make install
-
 ```
 
+- modify this template file `native_hosts/org.deepin.dmovie.json_template` with your extension ID
 
-## Usage
-`native_hosts/org.deepin.dmovie.json_template`文件需要改动
 ```conf
 {
     "name": "org.deepin.dmovie",
@@ -27,4 +32,13 @@ make install
     ]
 }
 ```
-`geddpfooejohhebhamibjkgkcahnkbnd` 需要改成你实际生成的插件ID
+`geddpfooejohhebhamibjkgkcahnkbnd` shuld be replaced with your true extension ID
+
+- installation
+
+```shell
+make install
+```
+
+### License
+This project is a chrome extension luanching local app demo, you can do anything under it, just enjoy it ;)

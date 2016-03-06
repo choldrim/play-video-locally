@@ -1,3 +1,6 @@
+first:
+	google-chrome --pack-extension=play-video-locally
+
 build:
 	google-chrome --pack-extension=play-video-locally --pack-extension-key=play-video-locally.pem
 
